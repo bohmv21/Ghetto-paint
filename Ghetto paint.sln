@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ghetto paint", "Ghetto paint\Ghetto paint.csproj", "{1AED1164-B655-43FF-A121-2478C2EBDE6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AED1164-B655-43FF-A121-2478C2EBDE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AED1164-B655-43FF-A121-2478C2EBDE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AED1164-B655-43FF-A121-2478C2EBDE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AED1164-B655-43FF-A121-2478C2EBDE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABED854E-3499-485C-B542-5ABBE4ED0A94}
+	EndGlobalSection
+EndGlobal
