@@ -8,30 +8,41 @@
         Title="MainWindow" Height="400" Width="600" MouseDown="MousDown">
 
 
-    <Grid x:Name="MainGrid">
+    <Grid x:Name="MainGrid" >
         <Grid.ColumnDefinitions>
 
             <ColumnDefinition Width="3*"></ColumnDefinition>
 
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
 
         </Grid.ColumnDefinitions>
 
-        <Canvas x:Name="Dock" HorizontalAlignment="Left" VerticalAlignment="Top"></Canvas>
+        <Canvas  Name="Dock" >
+            <Canvas.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Canvas.Background>
+        </Canvas>
+
+        <Canvas  Name="MouseUI" MouseMove="MainGrid_MouseMove">
+            <Canvas.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Canvas.Background>
+        </Canvas>
 
         <StackPanel Grid.Column="1">
 
-            <Button x:Name="btnCircle" Padding="20" Click="btnCircle_Click" Content="Ellipse"></Button>
-            <Button x:Name="btnRect" Padding="20" Click="btnRect_Click" Content="Rectangle"></Button>
-            <Rectangle x:Name="btnLine" Height="40" Fill="#FFDDDDDD" MouseDown="btnLine_Click" Stroke="#FF707070"></Rectangle>
+            <Button x:Name="btnCircle" Padding="10" Click="btnCircle_Click" Content="Ellipse"></Button>
+            <Button x:Name="btnRect" Padding="10" Click="btnRect_Click" Content="Rectangle"></Button>
+            <Button x:Name="btnPencil" Padding="10" Click="btnPencil_Click" Content="Pencil"></Button>
+            <Button x:Name="btnEraser" Padding="10" Content="Eraser" Click="btnEraser_Click"></Button>
 
             <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
-                <Label x:Name="lblWidth" Width="50" Content="0"/>
-                <Slider x:Name="slWidth" Maximum="500" Width="100" ValueChanged="slWidth_ValueChanged" />
+                <Label x:Name="lblWidth" Width="50" Content="1"/>
+                <Slider x:Name="slWidth" Maximum="500" Width="100" ValueChanged="slWidth_ValueChanged" Minimum="1" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label x:Name="lblHeight" Width="50" Content="0"/>
-                <Slider x:Name="slHeight" Maximum="500"  ValueChanged="slHeight_ValueChanged" MinWidth="100" />
+                <Label x:Name="lblHeight" Width="50" Content="1"/>
+                <Slider x:Name="slHeight" Maximum="500"  ValueChanged="slHeight_ValueChanged" MinWidth="100" Minimum="1" />
             </StackPanel>
 
             <ComboBox x:Name="cmbBox" Text="Colors" SelectionChanged="cmbBox_SelectionChanged">
@@ -41,12 +52,12 @@
                 <ComboBoxItem Name="Green" >Green</ComboBoxItem>
             </ComboBox>
 
+            <Button x:Name="btnClear" Content="Clear" Padding="5" Click="btnClear_Click" ></Button>
 
-
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lblThickness" Width="50" Content="1"/>
+                <Slider x:Name="slThickness" Maximum="100"   MinWidth="100" ValueChanged="slThickness_ValueChanged" Minimum="1" />
+            </StackPanel>
         </StackPanel>
-        
     </Grid>
-
-
-
 </Window>
